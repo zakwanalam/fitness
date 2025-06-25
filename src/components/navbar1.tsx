@@ -1,4 +1,4 @@
-import { Apple, BicepsFlexed, Bolt, Book, CalendarCheck, Dumbbell, Flame, Goal, HeartPulse, Menu, Sunset, Trees, UserRound, Zap } from "lucide-react";
+import { Apple, BicepsFlexed,  Book, CalendarCheck, Dumbbell,  Goal, HeartPulse, Menu,  UserRound, Zap } from "lucide-react";
 
 import {
   Accordion,
