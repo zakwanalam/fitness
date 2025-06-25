@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 
 import './App.css'
-import { Route, Router, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from './Home/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
   useEffect(() => {
     // Reset scroll position
     const scrollY = window.scrollY

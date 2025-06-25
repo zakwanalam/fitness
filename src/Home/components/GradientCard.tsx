@@ -1,8 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Dumbbell, HeartPulse, Flame, Timer } from "lucide-react"; // Icons from lucide-react
-import { MagicCard } from "@/components/magicui/magic-card";
 
 const modules = [
   {

@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import GlobalContainer from '@/Containers/GlobalContainer'
-import React from 'react'
 
 function HeroSection() {
   return (

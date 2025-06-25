@@ -1,4 +1,3 @@
-import React from 'react'
 import waveLines from '@/assets/wavy.svg'
 function WaveLines() {
   return (

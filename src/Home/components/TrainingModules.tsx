@@ -1,9 +1,7 @@
-import React from 'react'
 import { GradientCard } from './GradientCard'
 import { ShinyButton } from '@/components/magicui/shiny-button'
 import { ArrowRight } from 'lucide-react'
 import waveLines from '@/assets/wavy.svg'
-import WaveLines from './WaveLines'
 function TrainingModules() {
   return (
     <section className='w-screen py-20'>

@@ -3,19 +3,12 @@ import NavbarContainer from '../Containers/NavbarContainer'
 import { Navbar } from '@/components/navbar1'
 import GlobalContainer from '@/Containers/GlobalContainer'
 import HeroSection from './components/HeroSection'
-import { GradientCard } from './components/GradientCard'
-import { Button } from '@/components/ui/button'
-import { ArrowBigRight, ArrowRight } from 'lucide-react'
-import { ShinyButton } from '@/components/magicui/shiny-button'
 import waveLines from "../assets/wavy.svg"
 import TrainingModules from './components/TrainingModules'
-import WaveLines from './components/WaveLines'
 import { MarqueeDemo } from './components/Marquee'
 import fitnessModel from '@/assets/fitness-model.jpg'
-import { Chrono } from "react-chrono"
 import Timeline from '@/components/ui/timeline'
 import { useRef } from 'react'
-import { motion } from 'framer-motion'
 import { Footer2 } from '@/components/footer2'
 const data = [
   {
