@@ -1,9 +1,14 @@
-
 import { cn } from "@/lib/utils";
-import { motion, type MotionProps,  } from "framer-motion";
+import { motion, type MotionProps } from "framer-motion";
 import React from "react";
 
-const animationProps = {
+// Define a custom type for CSS variable animations
+type CustomMotionProps = MotionProps & {
+  initial?: Record<string, string | number>;
+  animate?: Record<string, string | number>;
+};
+
+const animationProps: CustomMotionProps = {
   initial: { "--x": "100%", scale: 0.8 },
   animate: { "--x": "-100%", scale: 1 },
   whileTap: { scale: 0.95 },
@@ -22,7 +27,7 @@ const animationProps = {
       mass: 0.5,
     },
   },
-}
+};
 
 interface ShinyButtonProps
   extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,
