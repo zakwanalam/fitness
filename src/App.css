@@ -1,7 +1,7 @@
 .glass-nav {
   padding: 25px 30px 25px 30px;
   position: relative;
-  background: rgba(143, 101, 101, 0.08);
+  background: rgba(143, 101, 101, 0.05);
   border: 1px solid rgba(207, 241, 180, 0.3);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);

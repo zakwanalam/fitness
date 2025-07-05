@@ -4,7 +4,7 @@ import GlobalContainer from '@/Containers/GlobalContainer'
 function HeroSection() {
   return (
     <div className='relative flex items-center justify-start h-[800px]' >
-      <img className='absolute w-full h-full object-cover' src='https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt=''></img>
+      <img className='absolute  w-full h-full object-cover object-[center_10%]' src='https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt=''></img>
       <GlobalContainer >
         <div className='absolute  space-y-5 -translate-y-[50%] w-100 '>
           <p className="text-9xl text-primary font-extrabold italic">
