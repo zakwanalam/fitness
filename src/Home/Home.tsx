@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import NavbarContainer from '../Containers/NavbarContainer'
 import { Navbar } from '@/components/navbar1'
 import GlobalContainer from '@/Containers/GlobalContainer'
 import HeroSection from './components/HeroSection'
