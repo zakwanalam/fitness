@@ -1,4 +1,4 @@
-import { Apple, BicepsFlexed, Book, CalendarCheck, Dumbbell, Goal, HeartPulse, Menu, UserRound, X, Zap } from "lucide-react";
+import { Apple, BicepsFlexed, Book, CalendarCheck, Dumbbell, Goal, HeartPulse, Menu, UserRound,  Zap } from "lucide-react";
 
 import {
   Accordion,
@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
-  SheetClose,
+  ,
   SheetContent,
   SheetHeader,
   SheetTitle,
