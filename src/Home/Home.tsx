@@ -63,7 +63,7 @@ function Home() {
 
     const observer = new IntersectionObserver(
       ([entry]) => setIsInView(entry.isIntersecting),
-      { threshold: 0.5 } // at least 50% of the element in view
+      { threshold: 0.6 }
     );
 
     observer.observe(el);
@@ -71,7 +71,6 @@ function Home() {
     return () => observer.disconnect();
   }, []);
 
-  // Trap scroll only when the div is in view
   useEffect(() => {
     const scrollDiv = containerRef.current;
 
@@ -89,8 +88,8 @@ function Home() {
         (scrollingDown && !atBottom) || (scrollingUp && !atTop);
 
       if (shouldTrap) {
-        e.preventDefault();
-        scrollDiv.scrollBy({ top: e.deltaY*0.4,behavior:'instant' });
+        e.preventDefault(); // prevent full-page scroll
+        scrollDiv.scrollBy({ top: e.deltaY * 30, behavior: 'smooth' });
       }
     };
 
@@ -101,23 +100,6 @@ function Home() {
     };
   }, [isInView]);
 
-  useEffect(() => {
-    const handleSlowPageScroll = (e: WheelEvent) => {
-      if (containerRef.current?.contains(e.target as Node)) {
-        // Let the scroll trap handle internal scroll
-        return;
-      }
-      e.preventDefault(); // stop native fast scroll
-      window.scrollBy({
-        top: e.deltaY*2.0, // slower scroll speed
-        behavior: "smooth", // or "smooth" (optional)
-      });
-    };
-  
-    window.addEventListener("wheel", handleSlowPageScroll, { passive: false });
-    return () =>
-      window.removeEventListener("wheel", handleSlowPageScroll);
-  }, []);
   return (
     <React.Fragment>
       <div className=" relative w-screen p-0">
@@ -125,10 +107,10 @@ function Home() {
         <div className=' '>
           <HeroSection />
         </div>
-        <div className='absolute top-0'>
-          <NavbarContainer >
+        <div className='absolute top-5'>
+          <GlobalContainer >
             <Navbar />
-          </NavbarContainer>
+          </GlobalContainer>
         </div>
       </div>
       <TrainingModules />
@@ -153,7 +135,7 @@ function Home() {
         </section>
       </GlobalContainer>
       <GlobalContainer>
-        <section className='flex py-50 justify-center pt-10 space-y-10 space-x-5  items-start'>
+        <section className='flex  max-md:flex-col-reverse   py-50 justify-center pt-10 space-y-10 space-x-5  items-start'>
           <div className='flex flex-col  flex-1'>
             <div className="flex flex-col space-y-5 rounded-md">
               <h1 className="font-bold text-xl">Training Program</h1>
@@ -164,7 +146,7 @@ function Home() {
             </div>
             <div
               ref={containerRef}
-              className="h-[400px] mt-10 overflow-y-auto relative [scrollbar-width:none]"
+              className="h-[400px] max-md:h[300px] mt-10  relative [scrollbar-width:none]"
               style={{
                 // Ensure these styles are present:
                 position: 'relative', // Required for scroll tracking
@@ -174,8 +156,7 @@ function Home() {
               <Timeline data={data} containerRef={containerRef} />
             </div>
           </div>
-
-          <div className='flex-1'>
+          <div className='flex-1 max-md:py-10'>
             <img className='rounded-xl w-full h-auto object-cover' src={fitnessModel} alt="Fitness Model" />
           </div>
         </section>

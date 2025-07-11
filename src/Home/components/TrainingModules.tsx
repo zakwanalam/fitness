@@ -8,7 +8,7 @@ function TrainingModules() {
       <div className='flex flex-col max-w-screen-md mx-auto items-center text-center space-y-5 justify-center '>
         <h1 className='text-white  font-bold  '>Training Modules</h1>
         <p className="text-muted-foreground">Choose a module to start your fitness journey</p>
-          <div className='absolute -right-60 translate-y-[30%] w-[350px] aspect-square bg-primary/25 blur-[100px] bg-blend-screen rounded-full'></div>
+          <div className='absolute max-md:hidden -right-60 translate-y-[30%] w-[350px] aspect-square bg-primary/25 blur-[100px] bg-blend-screen rounded-full'></div>
           <img className='absolute -right-80  translate-y-[30%] rotate-[270deg] size-1/2' src={waveLines} 
           style={{
             WebkitMaskImage: 'linear-gradient(to left, black 0px, transparent 650px)',

@@ -45,7 +45,7 @@ export default function Timeline({
 
   return (
       <div className="w-full  dark:bg-neutral-950">
-        <div ref={ref}   className="relative max-w-7xl mx-auto pb-20">
+        <div ref={ref}   className="relative max-w-7xl mx-auto md:pb-20">
           {data.map((item, index) => (
             <div
               key={index}
